@@ -163,7 +163,7 @@ export const techCategories: TechCategory[] = [
   },
   {
     category: "Infraestrutura",
-    items: ["Docker", "Docker Compose", "Nginx", "Azure", "Vercel", "Render"],
+    items: ["Docker", "Docker Compose", "Nginx", "Azure", "Vercel", "Render", "Oracle"],
     color: "neu-orange",
   },
   {
