@@ -19,7 +19,7 @@ const item = {
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center px-6 py-20 md:px-12 lg:px-24">
+    <section id="inicio" className="min-h-screen flex items-center px-6 py-20 md:px-12 lg:px-24">
       <motion.div
         variants={container}
         initial="hidden"
@@ -65,13 +65,31 @@ export default function Hero() {
             LinkedIn
           </NeuButton>
           <NeuButton
-            href={`mailto:${personalInfo.email}`}
+            href={`mailto:${personalInfo.emailProfessional}`}
             variant="outline"
             size="lg"
           >
             <MailIcon />
             E-mail
           </NeuButton>
+          <NeuButton
+            href="/CV_RAFAEL_ATS.pdf"
+            download="CV_Rafael_Almeida.pdf"
+            variant="secondary"
+            size="lg"
+          >
+            <DownloadIcon />
+            Currículo
+          </NeuButton>
+        </motion.div>
+
+        <motion.div
+          variants={item}
+          className="mt-10 pt-8 border-t-2 border-neu-black/10"
+        >
+          <p className="font-body text-base md:text-lg max-w-2xl leading-relaxed text-neu-black/70">
+            {personalInfo.about}
+          </p>
         </motion.div>
       </motion.div>
     </section>
@@ -108,6 +126,25 @@ function MailIcon() {
     >
       <rect width="20" height="16" x="2" y="4" rx="2" />
       <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+    </svg>
+  );
+}
+
+function DownloadIcon() {
+  return (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+      <polyline points="7 10 12 15 17 10" />
+      <line x1="12" y1="15" x2="12" y2="3" />
     </svg>
   );
 }

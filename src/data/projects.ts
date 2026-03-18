@@ -30,6 +30,12 @@ export interface TechCategory {
   color: string;
 }
 
+export interface Certification {
+  title: string;
+  institution: string;
+  hours: number;
+}
+
 export const projects: Project[] = [
   {
     id: "catalogo-digital",
@@ -63,6 +69,7 @@ export const projects: Project[] = [
       "Testes unitários com xUnit e EF Core InMemory",
     ],
     githubUrl: "https://github.com/RafaelVn1808/CatalagoApi",
+    liveUrl: "https://grupobompreco.com.br/",
     color: "neu-green",
     gridSpan: "featured",
     deployBadges: ["Vercel", "Render", "Supabase"],
@@ -96,6 +103,7 @@ export const projects: Project[] = [
       "Configuração de ambientes e gerenciamento de recursos",
     ],
     githubUrl: "https://github.com/RafaelVn1808/ExpenseManagement",
+    liveUrl: "https://expense.almeidadev.com.br/",
     color: "neu-blue",
     gridSpan: "wide",
     deployBadges: ["Azure", "Oracle Cloud", "Multi-Cloud"],
@@ -105,7 +113,7 @@ export const projects: Project[] = [
 export const experiences: Experience[] = [
   {
     id: "dev-junior",
-    role: "Desenvolvedor Júnior",
+    role: "Desenvolvedor Backend",
     company: "Polícia Científica do Pará",
     department: "Gerência de Informática",
     period: "06/2025 – Atual",
@@ -183,12 +191,58 @@ export const techCategories: TechCategory[] = [
   },
 ];
 
+export const certifications: Certification[] = [
+  {
+    title: "ASP .NET 10 Swagger Docker Kubernetes REST Web API RESTful JWT xUnit Testcontainers React JS do 0 à Azure, GCP e+",
+    institution: "Udemy",
+    hours: 67,
+  },
+  {
+    title: "Curso Web API ASP.NET Core Essencial (.NET 8 / .NET9)",
+    institution: "Udemy",
+    hours: 47,
+  },
+  {
+    title: "Java COMPLETO Programação Orientada a Objetos + Projetos",
+    institution: "Udemy",
+    hours: 54,
+  },
+  {
+    title: "Spring Boot Expert: JPA, REST, JWT, OAuth2 com Docker e AWS",
+    institution: "Udemy",
+    hours: 52,
+  },
+  {
+    title: "Algoritmos e Lógica de Programação",
+    institution: "Udemy",
+    hours: 30,
+  },
+  {
+    title: "Implementando Collections e Streams com Java",
+    institution: "DIO",
+    hours: 6,
+  },
+  {
+    title: "Introdução ao Git e ao GitHub",
+    institution: "DIO",
+    hours: 3,
+  },
+  {
+    title: "Projetos Ágeis com SCRUM",
+    institution: "DIO",
+    hours: 3,
+  },
+];
+
 export const personalInfo = {
   name: "Rafael Almeida",
   title: "Backend Developer",
   tagline:
     "Sistemas que funcionam em produção. APIs otimizadas, consultas 40% mais rápidas, deploy multi-cloud.",
+  about:
+    "Desenvolvedor Backend na Polícia Científica do Pará, onde atuo na evolução de sistemas em C# e ASP.NET Core. A transição da área administrativa para tecnologia trouxe visão de negócio aplicada à automação de fluxos e entrega de código limpo. Inglês B2 para documentação técnica e colaboração em times multiculturais.",
   email: "rafaelalmeida1808@gmail.com",
+  emailProfessional: "rafaelvn@almeidadev.com.br",
   phone: "(+55) 91 989892338",
   linkedin: "https://www.linkedin.com/in/rafael-almeida-ba4a92314",
   github: "https://github.com/RafaelVn1808",

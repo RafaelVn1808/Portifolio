@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 interface NeuButtonProps {
   children: React.ReactNode;
   href?: string;
+  download?: boolean | string;
   onClick?: () => void;
   variant?: "primary" | "secondary" | "outline";
   size?: "sm" | "md" | "lg";
@@ -29,6 +30,7 @@ const sizeStyles = {
 export default function NeuButton({
   children,
   href,
+  download,
   onClick,
   variant = "primary",
   size = "md",
@@ -50,8 +52,9 @@ export default function NeuButton({
     return (
       <motion.a
         href={href}
-        target="_blank"
-        rel="noopener noreferrer"
+        download={download}
+        target={download ? undefined : "_blank"}
+        rel={download ? undefined : "noopener noreferrer"}
         className={combinedStyles}
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}

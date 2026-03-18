@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit, Lexend } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -45,8 +46,9 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${outfit.variable} ${lexend.variable} antialiased bg-background text-foreground`}
+        className={`${outfit.variable} ${lexend.variable} antialiased bg-background text-foreground pt-16`}
       >
+        <Navbar />
         {children}
       </body>
     </html>

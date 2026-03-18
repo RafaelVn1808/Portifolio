@@ -6,7 +6,7 @@ import NeuButton from "./NeuButton";
 
 export default function Footer() {
   return (
-    <footer className="px-6 py-12 md:px-12 lg:px-24 border-t-3 border-neu-black">
+    <footer id="contato" className="px-6 py-12 md:px-12 lg:px-24 border-t-3 border-neu-black">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -27,8 +27,15 @@ export default function Footer() {
 
           <div className="flex flex-col gap-3">
             <NeuButton
-              href={`mailto:${personalInfo.email}`}
+              href={`mailto:${personalInfo.emailProfessional}`}
               variant="primary"
+              size="md"
+            >
+              {personalInfo.emailProfessional}
+            </NeuButton>
+            <NeuButton
+              href={`mailto:${personalInfo.email}`}
+              variant="outline"
               size="md"
             >
               {personalInfo.email}
